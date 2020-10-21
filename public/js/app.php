@@ -1,25 +1,38 @@
 <script>
+
 var app = new Vue ({
     el: "#app",
     data: {
-        pessoas: <?= json_encode([$data['pessoas']]) ?>,
+        pessoas: <?= json_encode($data['pessoas']) ?>,
+        novaPessoa: {
+          nome: '',
+          dataNasc: '',
+        }
     },
     methods: {
-        getPessoas: function() {
+        view: function() {
+            document.getElementById('table').classList.add('animated');
+            document.getElementById('table').classList.add('fadeOutLeft');
+            document.getElementById('btn-new').classList.add('animated');
+            document.getElementById('btn-new').classList.add('fadeOutLeft');
 
-            var self = this; // Armazena a instância do Vue em self
-      
-            axios.get("")
-              .then(function(response) {
-                console.log(response);
-                if (response.data.error) {
-                  self.errorMessage = response.date.message;
-                } else {
-                  // Faz referência a data.users
-                  self.pessoas = response.data.pessoas;
-                }
-              });
-          }
+            document.getElementById('adicionar').classList.add('animated');
+            document.getElementById('adicionar').classList.add('fadeInDown');
+
+            document.getElementById('title').innerHTML = "<i class='fa fa-plus'></i> Adicionar";
+
+            setTimeout(() => {
+                document.getElementById('btn-new').classList.add('hidden');
+                document.getElementById('adicionar').classList.add('add');
+            }, 1000);
+        },
+        addPessoa: function(e) {
+          e.preventDefault();
+          this.pessoas.push(this.novaPessoa);
+        },
+        removerPessoa: function(pessoa) {
+          this.pessoas.splice(this.pessoas.indexOf(pessoa), 1)
+        }        
     }
 })
 </script>

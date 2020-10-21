@@ -7,7 +7,6 @@ class Controller {
     public function index() {
 
         include "config/connection.php";
-
         $model = new Model();
 
         $data['pessoas'] = $model -> index($conn);
@@ -15,5 +14,14 @@ class Controller {
         $view = new View();
         $view->home($data);
         
+    }
+
+    public function delete($id) {
+        include "config/connection.php";
+        $model = new Model();
+
+        $data['pessoas'] = $model -> delete($id, $conn);
+        $view = new View();
+        $view->home($data);
     }
 }
