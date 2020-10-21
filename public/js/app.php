@@ -1,7 +1,8 @@
+<script>
 var app = new Vue ({
     el: "#app",
     data: {
-        pessoas: [],
+        pessoas: <?= json_encode([$data['pessoas']]) ?>,
     },
     methods: {
         getPessoas: function() {
@@ -21,3 +22,4 @@ var app = new Vue ({
           }
     }
 })
+</script>

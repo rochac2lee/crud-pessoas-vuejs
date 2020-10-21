@@ -6,11 +6,14 @@ class Controller {
 
     public function index() {
 
+        include "config/connection.php";
+
         $model = new Model();
 
-        $title = "Cadastro de Pessoas";
+        $data['pessoas'] = $model -> index($conn);
+        $data['title'] = "Cadastro de Pessoas";
         $view = new View();
-        $view->home($title);
+        $view->home($data);
         
     }
 }

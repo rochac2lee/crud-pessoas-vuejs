@@ -1,6 +1,6 @@
 <div class="bg"></div>
 
-<main class="main">
+<main class="main" id="app">
     <div class="head">
         <h1>Cadastro de Pessoas</h1>
 
@@ -16,7 +16,11 @@
                     </tr>
                 </thead>
                 <tbody>
-
+                <tr v-for="pessoa in pessoas">
+                    <td>{{ pessoa.id }}</td>
+                    <td>{{ pessoa.nome }}</td>
+                    <td>{{ pessoa.idade }}</td>
+                </tr>
                 </tbody>
             </table>
 
