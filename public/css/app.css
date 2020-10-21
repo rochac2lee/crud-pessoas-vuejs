@@ -1,3 +1,7 @@
+body, html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: Roboto,Helvetica,Arial,sans-serif;
@@ -5,7 +9,27 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fafafa;
+}
+
+.bg {
+    background: url('../../public/images/pessoas.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;    
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.main {
+    position: absolute;
+    z-index: 2;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 }
 
 .head {
@@ -21,4 +45,46 @@ body {
     color: #fff;
     font-weight: 400;
     padding-top: 30px;
+}
+
+.content {
+    width: 80%;
+    height: 300px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px #254d71;
+}
+
+.table {
+    padding: 4%;    
+}
+
+table {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.table td, .table th {
+    text-align: left;
+    padding: .75rem;
+    vertical-align: center;
+    border-top: 1px solid #dee2e6;
 }
