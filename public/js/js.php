@@ -1,5 +1,6 @@
 <script>
 
+/** Cria um novo objeto Vue */
 var app = new Vue ({
     el: "#app",
     data: {
@@ -10,6 +11,7 @@ var app = new Vue ({
         }
     },
     methods: {
+        /** Método viewForm oculta a tabela e mostra o formulário para novo cadastro */
         viewForm: function() {
             document.getElementById('table').classList.add('animated');
             document.getElementById('table').classList.add('fadeOutLeft');
@@ -27,6 +29,7 @@ var app = new Vue ({
                 document.getElementById('adicionar').classList.add('add');
             }, 1000);
         },
+        /** Médoto addPessoa recebe os dados por método post e envia ao banco */
         addPessoa: function(e) {
             e.preventDefault();
             this.pessoas.push(this.novaPessoa);
@@ -43,6 +46,7 @@ var app = new Vue ({
             location.reload();
 
         },
+        /** Método removerPessoa permite o usuário excluir registro após confirmação */
         removerPessoa: function(pessoa) {
           
             swal({

@@ -3,7 +3,7 @@
 include 'models/Model.php';
 
 /**
- * Classe Controller
+ * Classe Controller da Aplicação
  *
  * @copyright (c) 2020, Cleberli da Rocha
  */
