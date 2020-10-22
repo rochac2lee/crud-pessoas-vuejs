@@ -2,7 +2,7 @@
 > Desafio para ingressar como Desenvolvedor PHP FullStack Pleno na DG Solutions
 
 ## Sobre a aplicação
-Essa aplicação é um cadastro de pessoas criado com PHP e MySQL no Back-End e CSS, HTML e Vue.js no Front-End
+Essa aplicação é um cadastro de pessoas criado com PHP (padrão MVC) e MySQL no Back-End e CSS, HTML e Vue.js no Front-End
 
 ## Funções Disponíveis
 * [ ] Adicionar e Excluir Pessoas
