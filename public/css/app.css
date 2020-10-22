@@ -49,11 +49,17 @@ body {
 
 .content {
     width: 80%;
-    height: 300px;
+    overflow-y: auto;
+    height: 500px;
     background: #fff;
     margin: 0 auto;
     border-radius: 20px;
     box-shadow: 1px 1px 0px 0px #9793c6;
+}
+
+.img {
+    width: 40%;
+    margin: 7% 0px 0px 35%;
 }
 
 .table {
@@ -89,6 +95,33 @@ td {
     padding: .75rem;
     vertical-align: center;
     border-top: 1px solid #dee2e6;
+}
+
+.btn-edit {
+    outline-style: none;
+    border-radius: 50%;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #3f51b5;
+    border: 1px solid #3f51b5;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+.btn-edit:hover {
+    outline-style: none;
+    border-radius: 50%;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    color: #ccc;
+    transition: all .15s linear;
+    background-color: #5b6abf;
+    border: 1px solid #5b6abf;   
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
 
 .btn-delete {

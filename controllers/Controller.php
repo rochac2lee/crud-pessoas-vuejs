@@ -16,12 +16,19 @@ class Controller {
         
     }
 
-    public function delete($id) {
+    public function add() {
         include "config/connection.php";
         $model = new Model();
 
-        $data['pessoas'] = $model -> delete($id, $conn);
-        $view = new View();
-        $view->home($data);
+        $pessoa = $_POST;
+        $model -> add($conn, $pessoa);
+    }
+
+    public function delete() {
+        include "config/connection.php";
+        $model = new Model();
+
+        $pessoa = $_POST;
+        $model -> delete($conn, $pessoa);
     }
 }
