@@ -9,4 +9,11 @@ class View {
         include "public/js/app.php";
     }
 
+    public function edit($data) {
+        include "templates/header.php";
+        include "pages/edit.php";
+        include "templates/footer.php";
+        include "public/js/app.php";
+    }
+
 }

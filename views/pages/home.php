@@ -6,7 +6,7 @@
 
         <div class="content animated fadeInRight">
 
-        <button class="btn-new" id="btn-new" v-on:click="view()"><i class="fa fa-plus"></i> Adicionar</button>
+        <button class="btn-new" id="btn-new" v-on:click="viewForm()"><i class="fa fa-plus"></i> Adicionar</button>
             <form v-on:submit="addPessoa" method="post">
                 <div class="frm-adicionar" id="adicionar">
                     <img src="https://image.flaticon.com/icons/png/512/283/283516.png" class="img">
@@ -33,20 +33,19 @@
                         <th scope="col">Nome</th>
                         <th scope="col">Nascimento</th>
                         <th scope="col">Idade</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col">Exclusão</th>
                     </tr>
                 </thead>
                 <tbody>
-                <tr v-for="pessoa in pessoas">
-                    <td>{{ pessoa.id }}</td>
-                    <td>{{ pessoa.nome }}</td>
-                    <td>{{ pessoa.dataNasc }}</td>
-                    <td>{{ pessoa.idade }} anos</td>
-                    <td>
-                        <button class="btn-edit" v-on:click="editarPessoa(pessoa)"><i class="fa fa-pencil-alt"></i></button>
-                        <button class="btn-delete" v-on:click="removerPessoa(pessoa)"><i class="fa fa-trash"></i></button>
-                    </td>
-                </tr>
+                    <tr v-for="pessoa in pessoas">
+                        <td>{{ pessoa.id }}</td>
+                        <td>{{ pessoa.nome }}</td>
+                        <td>{{ pessoa.dataNasc }}</td>
+                        <td>{{ pessoa.idade }} anos</td>
+                        <td>
+                            <button class="btn-delete" v-on:click="removerPessoa(pessoa)"><i class="fa fa-trash"></i></button>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
 

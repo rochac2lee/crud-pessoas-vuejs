@@ -97,33 +97,6 @@ td {
     border-top: 1px solid #dee2e6;
 }
 
-.btn-edit {
-    outline-style: none;
-    border-radius: 50%;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    color: #fff;
-    background-color: #3f51b5;
-    border: 1px solid #3f51b5;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-.btn-edit:hover {
-    outline-style: none;
-    border-radius: 50%;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    color: #ccc;
-    transition: all .15s linear;
-    background-color: #5b6abf;
-    border: 1px solid #5b6abf;   
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-
 .btn-delete {
     outline-style: none;
     border-radius: 50%;
@@ -159,7 +132,7 @@ td {
     padding: 7px;
     cursor: pointer;
     color: #fff;
-    background-color: #4caf50;
+    background: linear-gradient(60deg, #66bb6a, #43a047);
     border: 1px solid #4caf50;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }
@@ -173,7 +146,7 @@ td {
     cursor: pointer;
     color: #ccc;
     transition: all .15s linear;
-    background-color: #69ae6b;
+    background: linear-gradient(60deg, #66bb6a, #43a047);
     border: 1px solid #69ae6b; 
     box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
 }

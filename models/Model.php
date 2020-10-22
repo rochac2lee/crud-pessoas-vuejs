@@ -35,4 +35,16 @@ class Model {
         $conn->exec("DELETE FROM pessoas WHERE id = '$id'");
     }
 
+    public function edit($conn, $pessoa) {
+        $id = $pessoa['id'];
+        $select = "SELECT 
+                    id, nome, 
+                    date_format(dataNasc,'%d/%m/%Y') as dataNasc, 
+                    YEAR(FROM_DAYS(TO_DAYS(NOW())-TO_DAYS(dataNasc))) AS idade 
+                   from pessoas WHERE WHERE id = '$id'";
+        $result = $conn -> prepare($select);
+        $result -> execute();
+        return $result -> fetchAll(PDO::FETCH_OBJ);
+    }
+
 }

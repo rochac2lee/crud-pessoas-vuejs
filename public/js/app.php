@@ -10,7 +10,7 @@ var app = new Vue ({
         }
     },
     methods: {
-        view: function() {
+        viewForm: function() {
             document.getElementById('table').classList.add('animated');
             document.getElementById('table').classList.add('fadeOutLeft');
             document.getElementById('btn-new').classList.add('animated');
@@ -45,19 +45,34 @@ var app = new Vue ({
         },
         removerPessoa: function(pessoa) {
           
+            swal({
+                title: "Excluir de Registro",
+                text: "Deseja realmente excluir esse Registro?",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true
+                })
+                .then((willDelete) => {
+                if (willDelete) {
+                    swal("Pronto! Registro excluído com sucesso!", {
+                    icon: "success",
+                    });
+                    
+                    $.post("index.php?acao=delete", {
+                        id: pessoa.id
+                    },
+                    function(data) {
+                        $("#return").html(data);
+                    } , "html");
 
-          $.post("index.php?acao=delete", {
-                
-                id: pessoa.id
-                
-            },
-            function(data) {
-                $("#return").html(data);
-            } , "html");
+                    this.pessoas.splice(this.pessoas.indexOf(pessoa), 1)
 
-            this.pessoas.splice(this.pessoas.indexOf(pessoa), 1)
+                }
+            });        
 
-        }        
+        }     
+
     }
 })
+
 </script>
